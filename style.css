@@ -1,0 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: none;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://i.pinimg.com/1200x/46/6b/8f/466b8f2b5ae0e475e29f6df55364df2d.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Centraliza o título */
+  background: #ffffffec;
+  padding: 30px; /* Respiro maior */
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 162, 255, 0.2); /* Sombra azulada */
+  width: 90%;
+  max-width: 500px;
+}
+
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e1e8f0;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input-container input:focus {
+  border-color: #00a2ff;
+  box-shadow: 0 0 8px rgba(0, 162, 255, 0.3);
+}
+
+.input-container button {
+  padding: 0 20px;
+  border: none;
+  border-radius: 6px;
+  background: #00a2ff;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-container button:hover {
+  background: #0077cc;
+}
+
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 8px 16px;
+  border: 2px solid #00a2ff;
+  background: transparent;
+  color: #00a2ff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.filters button:hover,
+.filters button.active {
+  background: #00a2ff;
+  color: white;
+}
+
+
+
+#taskList {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+#taskList::-webkit-scrollbar {
+  width: 8px;
+}
+
+#taskList::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+#taskList::-webkit-scrollbar-thumb {
+  background: #00a2ff;
+  border-radius: 10px;
+}
+
+#taskList::-webkit-scrollbar-thumb:hover {
+  background: #0077cc;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #00a2ff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#taskList li span {
+  flex: 1;
+  text-align: left;
+  font-weight: 600;
+  color: #1a2a40;
+}
+
+ 
+.container .concluir-btn {
+  background-color: #00cc88;
+  color: white;
+  padding: 6px 12px;
+  margin: 0 5px;
+  font-size: 13px;
+  border-radius: 6px;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.container .concluir-btn:hover {
+  background-color: #009966;
+}
+
+.container .remove-btn {
+  background-color: #ff3355;
+  color: white;
+  padding: 6px 12px;
+  margin: 0;
+  font-size: 13px;
+  border-radius: 6px;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.container .remove-btn:hover {
+  background-color: #cc0000;
+}
